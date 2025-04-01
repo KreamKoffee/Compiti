@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <script>
+        var dipendenti = [
+            { nome: 'Luca', posizione: 'Sviluppatore', stipendio: 2500, dataAssunzione: new Date(2019, 5, 20) },
+            { nome: 'Maria', posizione: 'Designer', stipendio: 3000, dataAssunzione: new Date(2018, 8, 12) },
+            { nome: 'Giovanni', posizione: 'Sviluppatore', stipendio: 4000, dataAssunzione: new Date(2020, 3, 10) },
+            { nome: 'Anna', posizione: 'Project Manager', stipendio: 5000, dataAssunzione: new Date(2017, 10, 3) },
+            { nome: 'Francesco', posizione: 'Sviluppatore', stipendio: 3200, dataAssunzione: new Date(2015, 7, 15) },
+            { nome: 'Lucia', posizione: 'Designer', stipendio: 2700, dataAssunzione: new Date(2019, 11, 22) },
+            { nome: 'Marco', posizione: 'Project Manager', stipendio: 5500, dataAssunzione: new Date(2021, 1, 8) }
+        ];
+
+        function ordina(v){
+            for(var i=0; i<v.length-1; i++){
+                for(var j=i+1; j<v.length; j++ ){
+                    var temp;
+                    temp = v[i];
+                    v[i] = v[j];
+                    v[j] = temp;
+                }
+            }
+            return v;
+        }
+
+        function filtra(v){
+            return v.filter(a => a.stipendio > 3000);
+        }
+
+        function media(v){
+            var sum = 0;
+            for(var i=0; i<v.length; i++){
+                sum += v[i].stipendio;
+            }
+            return sum/v.length;
+        }
+
+        function recente(v){
+            var min = v[0]
+            for(var i=1; i<v.lenght; i++){
+                if (min.dataAssunzione > v[i].dataAssunzione){
+                    min = v[i];
+                }
+            }
+
+            return min;
+        }
+
+        function tabella(v) {
+    var s = "<table class='table table-striped table-bordered'>";
+    s += "<thead><tr><th>Nome</th><th>Posizione</th><th>Stipendio</th><th>Data Assunzione</th></tr></thead>";
+    s += "<tbody>";
+    for (var i = 0; i < v.length; i++) {
+        s += "<tr>";
+        s += "<td>" + v[i].nome + "</td>";
+        s += "<td>" + v[i].posizione + "</td>";
+        s += "<td>" + v[i].stipendio + " €</td>";
+        s += "<td>" + v[i].dataAssunzione.toLocaleDateString() + "</td>";
+        s += "</tr>";
+    }
+    s += "</tbody>";
+    s += "</table>";
+
+    document.write(s);
+}
+
+        console.log(ordina(dipendenti));
+        console.log(filtra(dipendenti));
+        console.log(media(dipendenti));
+        console.log(recente(dipendenti));
+        console.log(tabella(dipendenti));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

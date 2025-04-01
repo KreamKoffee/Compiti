@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // per scrivere a video
+        document.write("testo da scrivere");
+
+
+        // per inserire
+        var s = prompt("inserisci una stringa: ");
+
+
+        // per controllare se è un numero
+        isNan(s) // restituisce true se non è un numero
+
+
+        //conversioni
+        parseInt(n); // converte da stringa a numero
+        parseFloat(n); // converte da stringa a float
+
+
+        //funzioni matematiche
+        Math.sqrt(n) // radice del numero n
+        Math.floor(n) // arrotonda per difetto
+        Math.ceil(n) // arrotonda per eccesso
+        Math.round(n) // arrotonda all'intero più vicino
+        Math.pow(a,b) // eleva a alla b
+        Math.random() // restituisce un numero tra 0 e 1
+
+        Math.E //numero di neplero
+        Math.PI // pi greco
+        Math.sin(Math.PI/2) // seno di pi greco mezzi
+        Math.cos(Math.PI/2) // coseno di pigraco mezzi
+
+        //numero casuale tra inizio e fine inclusi
+        var y = Math.floor(Math.random() * (fine - inizio + 1)) + inizio;
+
+
+        //metodi per le stringhe
+        s.length // restitusce la lunghezza della stringa
+        s.charAt(pos); // restitusce il carattere all'indice pos
+        
+        s.indexOf("z"); // restituisce l'indice della lettera inserita, se non lo si trova da -1
+        s.lastIndexOf('o'); // restituisce l'ultima posizione della lettera inserita
+        
+        s.substring(0,4);//estrae la sottostringa da 0 a 3
+        s.substring(5); //estrae la sottostringa da 5 alla fine
+        
+        s.replace("Ciao", "Hello"); // sostituisce Ciao con Hello
+        
+        s.toUpperCase(); // converte tutta la stringa in maiuscolo
+        s.toLowerCase(); // converte tutta la stringa in minuscolo
+        
+        s.charCodeAt(0); // restituisce il valore ascii della lettera in pos 0
+        String.fromCharCode(codice); // converte valore ascii in un carattere
+
+        //vari metodi per scorrere un vettore
+        for(var i=0;i<v.length;i++){
+            console.log(v[i]);
+        }
+
+        v.forEach(element => {
+            console.log(v[i]);
+        });
+
+        for(var element of vet){
+            console.log(v[i]);
+        }
+
+
+        //metodi per vettori
+        v.reverse(); // inverte l'ordine del vettore
+        
+        v.push(1); // inserisce alla coda
+        v.pop(); // rimuove l'ultimo elemento e lo restituisce
+        
+        v.shift(); // rimuove in testa e lo restituisce
+        v.unshift(5); // aggiunge uno o più elementi in testa
+
+        vet.sort(); // ordina stringhe alfabeticamente, con numeri dal piccolo al grande
+
+        //Map, Filter, Reduce
+        var vetQuadrati=vet.map(num=>num*num); // quadrati dei numeri in un vettore
+        var s=vet.reduce((acc,num)=>acc+num,0); // per ogni num nel vettore viene sommato ad acc partendo dall'indice 0
+        var vetPari=vet.filter(num=>num%2==0); // filtra i numeri pari
+
+        // Filtra i numeri pari, raddoppiali e calcola la somma
+        var risultato = numeri
+            .filter((num) => num % 2 === 0) // Filtra i pari: [2, 4]
+            .map((num) => num * 2)          // Raddoppia: [4, 8]
+            .reduce((acc, num) => acc + num, 0); // Somma: 12
+
+        //posso aggregare queste funzioni direttamente con il .
+
+        //Date
+        var oggi=new Date();// istante attuale
+        var dataNascita=new Date(1970,6,28); // variabile di data
+        var dataOraNascita=new Date(1970,6,28,10,30,0); // data con orario
+        
+        var esempioData=new Date(10000000000); // Millisecondo passati dall Unix Epoch (1-1-1970 00:00:00)
+        
+        var anno=oggi.getFullYear(); // Estrae l'anno da una data
+        var mese=oggi.getMonth(); // Estrae il mese a partire da 0
+        var giorno=oggi.getDate(); // Estrae il giorno
+        var gSet=oggi.getDay(); // Restituisce il numero del giorno della settimana (0-Domenica ... 6-Sabato)
+        var ore=oggi.getHours(); // restituisce le ore
+        var min=oggi.getMinutes(); // restituisce i minuti
+        var sec=oggi.getSeconds(); // restituisce i secondi
+        
+        esempio.setFullYear(2025);// Modifica l'anno
+        esempio.setMonth(3); // Modifica il mese
+        esempio.setDate(20); // Modifica il giorno
+        esempio.setHours(12); // Modifica le ore
+        esempio.setMinutes(30); // Modifica i minuti
+        esempio.setSeconds(45); // Modifica i secondi
+        oggi.getTime(); // Restituisce il numero di millisec dalla Unix Epoch
+
+    </script>
+    
+</body>
+</html>

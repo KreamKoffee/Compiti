@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        do{
+            do{
+                var base = prompt("Inserisci la base");
+                var altezza = prompt("Inserisci l-altezza");
+            }while(isNaN(base));
+        }while(isNaN(altezza));
+        
+        var perimetro = base*3;
+        var area = (base*altezza)/2;
+        document.write("<h1>Il perimetro vale: " +perimetro+"</h1>");
+        document.write("<h1>L'area vale: "+area+"</h1>")
+
+        document.write("<hr>") 
+
+        do{
+            var num = prompt("Inserisci un numero");
+        }while(isNaN(num));
+        var sum = 0;
+        num = parseInt(num);
+        sum = parseInt(sum);
+
+        for (var j=0; j<10; j++){
+            
+            
+            document.write("<h1>"+num*(j+1)+"</h1>");
+        }
+
+        document.write("<hr>");
+
+        var n = parseInt(prompt("Inserisci un numero: ")); 
+        let isPrimo = true;
+        
+        
+        for (var i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                isPrimo = false;
+                break;
+            }
+        }
+
+        if(isPrimo){
+            document.write("<h1>Il numero è primo</h1>")
+        }else{
+            document.write("<h1>Il numero non è primo</h1>");
+        }
+
+    </script>
+
+</body>
+</html>

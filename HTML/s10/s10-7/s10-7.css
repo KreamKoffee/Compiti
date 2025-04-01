@@ -1,0 +1,31 @@
+body{
+    background-image: url(img/bg.png);
+    background-size: cover;
+}
+
+.nav{
+    width: 300px;
+    font-size: 25pt;
+    margin: 50px auto;
+}
+
+.photo{
+    margin: 0 auto;
+    width: 1600px
+}
+
+.photo img{
+    margin: 20px 0px 20px 20px;
+    width: 480px;
+    border: 8px solid;
+    border-color: #fcc0cb;
+    border-radius: 100px;
+    border-width: 5px;
+}
+
+.photo img:hover{
+    transform: scale(1.5);
+    transition-duration: 300ms;
+    
+}
+

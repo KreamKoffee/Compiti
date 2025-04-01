@@ -1,0 +1,54 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, cyan, blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: cambioImmagine 9s infinite;
+}
+
+
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+body {
+    background-image: url(SFONDO2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.A, .B, .C, .D, .E, .F {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 20%;
+    text-align: center;
+    border-width: 30%;
+    max-width: 300px;
+    
+}
+
+.img {
+    border-radius: 10%;
+    animation: cambioImmagine 9s infinite;
+}
+
+.bg{
+    background-image: linear-gradient(white, rgb(155, 224, 249), white, rgb(250, 162, 250));
+    
+    
+}
+
+
+   
+
+

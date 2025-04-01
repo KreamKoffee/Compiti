@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcolaGiorni(data1, data2) {
+            var time1 = new Date(data1).getTime();
+            var time2 = new Date(data2).getTime();
+            var differenza = Math.abs(time2 - time1);
+            var giorni = Math.ceil(differenza / (1000 * 60 * 60 * 24));
+            return giorni;
+        }
+
+        var data1 = "2025-03-01";
+        var data2 = "2025-03-30";
+        console.log("Numero di giorni tra le due date:", calcolaGiorni(data1, data2));
+
+
+        function isBisestile(anno) {
+            if ((anno % 4 == 0 && anno % 100 != 0) || (anno % 400 == 0)) {
+                return true;
+            }
+            return false;
+        }
+
+        var anno = 2024;
+        console.log("L'anno " + anno + " è bisestile?", isBisestile(anno));
+
+
+        function giornoDellaSettimana(data) {
+            var giorni = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
+            var giorno = new Date(data).getDay();
+            return giorni[giorno];
+        }
+
+        var data = "2025-03-30";
+        console.log("Il giorno della settimana è:", giornoDellaSettimana(data));
+
+
+        function aggiungiGiorni(data, giorni) {
+            var nuovaData = new Date(data);
+            nuovaData.setDate(nuovaData.getDate() + giorni);
+            return nuovaData.toLocaleDateString();
+        }
+
+        var data = "2025-03-30";
+        var giorniDaAggiungere = 10;
+        console.log("Nuova data:", aggiungiGiorni(data, giorniDaAggiungere));
+
+
+        function primaEUltimaData(mese, anno) {
+            var primaData = new Date(anno, mese - 1, 1);
+            var ultimaData = new Date(anno, mese, 0);
+            return {
+                prima: primaData.toLocaleDateString(),
+                ultima: ultimaData.toLocaleDateString()
+            };
+        }   
+
+        var anno = 2025;
+        var mese = 3; // Marzo
+        var date = primaEUltimaData(mese, anno);
+        console.log("Prima data:", date.prima);
+        console.log("Ultima data:", date.ultima);
+
+
+        function formattaData(data) {
+            var d = new Date(data);
+            var giorno = d.getDate().toString().padStart(2, '0'); // Ottiene il giorno e aggiunge uno 0 iniziale se necessario
+            var mese = (d.getMonth() + 1).toString().padStart(2, '0'); // Ottiene il mese (da 0 a 11) e aggiunge uno 0 iniziale
+            var anno = d.getFullYear(); // Ottiene l'anno
+            return `${giorno}/${mese}/${anno}`; // Restituisce la data formattata
+        }   
+
+        var data = "2025-03-30";
+        console.log("Data formattata:", formattaData(data));
+
+
+        function giorniAllaFineAnno(data) {
+            var dataCorrente = new Date(data);
+            var fineAnno = new Date(dataCorrente.getFullYear(), 11, 31);
+            var differenza = fineAnno.getTime() - dataCorrente.getTime();
+            var giorni = Math.ceil(differenza / (1000 * 60 * 60 * 24));
+            return giorni;
+        }
+
+        var data = "2025-03-30";
+        console.log("Giorni alla fine dell'anno:", giorniAllaFineAnno(data));
+
+        substring
+    </script>
+</body>
+</html>

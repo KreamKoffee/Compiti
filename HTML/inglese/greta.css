@@ -1,0 +1,97 @@
+
+H1{ color: #000000;
+    text-align: center;
+    font-family: comics 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 80px;;
+
+
+}
+
+
+.bg{
+    background-image: linear-gradient(white, rgb(155, 224, 249), white, rgb(250, 162, 250));
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+
+
+td{
+    border: 2px solid lightslategray;
+    padding: 10px;
+}
+th{
+    border: 2px solid lightslategray;
+    padding: 5px;
+}
+td{
+    
+    padding: 5px;
+}
+
+.elenco{
+    text-align: left;
+}
+
+.ciao{
+list-style: none;
+padding: 10px;
+
+}
+
+.siumm{
+    list-style: none;
+    padding: 10px;
+}
+
+
+
+.face{
+    border-radius: 10%;
+    width: 600px;
+
+}
+
+.suca{
+color: green;
+margin: 2px solid black;
+text-decoration: none;
+background-color: lightcoral;
+
+    
+}
+
+footer{
+    text-align: center;
+    text-decoration: none;
+margin: 2px solid black;
+}
+.right{
+    text-align: right;
+}  
+.left{
+    text-align: left;
+}  
+
+.back{
+    width: 100px;
+    
+    
+    
+}
+.left{
+    text-align: left;
+    background-image: linear-gradient(white, rgb(155, 224, 249), white, rgb(250, 162, 250));
+    font-size: 30px;
+}
+
+.big{
+    width: 600px;
+}
+.cent{
+    text-align: left;
+    
+    font-size: 30px;
+}

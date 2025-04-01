@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function acronimo(str){
+            var nuovaastr = str.split(" ");
+            // nuovastr = ["shut", "the", "fuck", "up"];
+            var s="";
+            for(var i =0; i<nuovaastr.length ; i++){
+                s +=nuovaastr[i][0];
+            }
+
+            return s;
+        }
+
+        alert(acronimo("Shut thee fuck up"));
+    </script>
+    
+</body>
+</html>

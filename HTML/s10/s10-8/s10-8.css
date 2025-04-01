@@ -1,0 +1,31 @@
+h1{
+    color: gold;   
+    font-size: 50pt; 
+}
+
+body{
+    
+    background-image: url(img/2024-02-08-113956.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+table{
+    color: #fcc0cb;
+    font-size: 20pt;
+}
+
+th{
+    color: gold;
+}
+
+th, td{
+    width: 100px;
+    height: 70px;
+}
+
+th:hover, td:hover{
+    background: #fcc0cb;
+    color: black;
+    border-radius: 10px;
+}

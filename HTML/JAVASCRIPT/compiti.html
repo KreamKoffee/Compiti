@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function raddoppiaNumeri(arr) {
+            return arr.map(num => num * 2);
+        }
+
+        function stringheMaiuscole(arr) {
+            return arr.map(str => str.toUpperCase());
+        }
+
+        function soloPari(arr) {
+            return arr.filter(num => num % 2 === 0);
+        }
+
+        function paroleLunghe(arr) {
+            return arr.filter(str => str.length > 5);
+        }
+
+        function sommaNumeri(arr) {
+            return arr.reduce((acc, num) => acc + num, 0);
+        }
+
+        function numeroPiuGrande(arr) {
+            var max = arr[0];
+            for(var i=1; i<arr.length; i++){
+                if(max < arr[i]){
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+
+        function moltiplicaNumeri(arr) {
+            return arr.reduce((acc, num) => acc * num, 1);
+        }
+
+        function filtraRaddoppiaSomma(arr) {
+        return arr
+        .filter(num => num % 2 === 0)
+        .map(num => num * 2)
+        .reduce((acc, num) => acc + num, 0);
+}
+    </script>
+</head>
+<body>
+    <script>
+        var numeri = [1, 2, 3, 4];
+        console.log(raddoppiaNumeri(numeri));
+
+        var parole = ["ciao", "mondo", "javascript"];
+        console.log(stringheMaiuscole(parole));
+
+        var numeri = [1, 2, 3, 4, 5, 6];
+        console.log(soloPari(numeri));  
+
+        var parole = ["ciao", "mondo", "javascript", "programmazione"];
+        console.log(paroleLunghe(parole));
+
+        var numeri = [1, 2, 3, 4];
+        console.log(sommaNumeri(numeri));
+
+        var numeri = [1, 2, 3, 4];
+        console.log(numeroPiuGrande(numeri));
+
+        var numeri = [1, 2, 3, 4];
+        console.log(moltiplicaNumeri(numeri));
+
+        var numeri = [1, 2, 3, 4, 5, 6];
+        console.log(filtraRaddoppiaSomma(numeri)); 
+    </script>
+    
+</body>
+</html>
