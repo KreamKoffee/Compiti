@@ -9,7 +9,6 @@ public class main {
             num = scanner.nextInt();
         } while (num <= 0 || num >= 10000);
 
-        // Conta i divisori
         int count = 0;
         for (int i = 1; i <= num; i++) {
             if (num % i == 0) {
@@ -17,7 +16,6 @@ public class main {
             }
         }
 
-        // Crea il vettore dei divisori
         int[] divisori = new int[count];
         int idx = 0;
         for (int i = 1; i <= num; i++) {
@@ -25,8 +23,6 @@ public class main {
                 divisori[idx++] = i;
             }
         }
-
-        // Visualizza i divisori
         System.out.print("Divisori di " + num + ": ");
         for (int d : divisori) {
             System.out.print(d + " ");
