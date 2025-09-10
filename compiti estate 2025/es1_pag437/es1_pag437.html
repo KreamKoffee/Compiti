@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function somma(){
+                var prodotti=document.querySelectorAll('input[name="merci"]:checked');
+                var p=Array.from(prodotti);
+                var prezzi=p.map(n=>parseFloat(n.value));
+                var t=prezzi.reduce((n,s)=>s+n,0);
+                document.getElementById("totale").value=t;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Elenco merci da spedire</h3>
+        <input type="checkbox" id="Stampante HP" name="merci" value="120">Stampante HP (120€)<br>
+        <input type="checkbox" id="Mouse" name="merci" value="15">Mouse Logitech (15€)<br>
+        <input type="checkbox" id="Stampante Epson" name="merci" value="279">Stampante Epson (279€)<br>
+        <input type="checkbox" id="Scanner" name="merci" value="102">Scanner Orion (102€)<br>
+        <input type="checkbox" id="Pen" name="merci" value="39">PenLight MicroChannel (39€)<br>
+        <button onclick="somma();">Totale</button>
+        <input type="text" id="totale" name="totale" disabled="true">
+        <div id="scontrino"></div>
+    </body>
+</html>
