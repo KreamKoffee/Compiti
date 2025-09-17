@@ -1,0 +1,8 @@
+<!ELEMENT articolo (identificativo, titolo, data?, paragrafo+)>
+<!ELEMENT identificativo (#PCDATA)>
+<!ELEMENT titolo (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT paragrafo (titolo?, tipo, testo+, immagine*)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT testo (#PCDATA)>
+<!ELEMENT immagine (#PCDAT

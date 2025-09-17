@@ -1,0 +1,3 @@
+<articolo titolo="esempio" identificativo="12345" data="2024-06-15">
+    <paragrafo titolo="Introduzione" tipo="testo">Questo è un paragrafo di esempio nel documento XML.</paragrafo>
+</articolo>
