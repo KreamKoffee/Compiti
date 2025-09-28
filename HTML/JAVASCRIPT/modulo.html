@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+        <script>
+            function stampa(){
+                var nome = document.getElementById("nome").value;
+                var email = document.getElementById("email").value;
+                var eta = document.getElementById("eta").value;
+                var genere = document.querySelector('input[name="genere"]:checked');
+                var interessi = document.querySelectorAll('input[name="interessi"]:checked');
+                var soddisfazione = document.getElementById("soddisfazione").value;
+
+                document.getElementById("rNome").innerText = nome;
+                document.getElementById("rEmail").innerText = email;
+                document.getElementById("rEta").innerText = eta;
+                document.getElementById("rGenere").innerText = genere ? genere.value : "Non selezionato";
+
+                var interessiSelezionati = [];
+                interessi.forEach((interesse) => {
+                    interessiSelezionati.push(interesse.value);
+                });
+                document.getElementById("rInteressi").innerText = interessiSelezionati.join(", ") || "Nessuno";
+
+                document.getElementById("rSoddisfazione").innerText = soddisfazione;
+            }
+        </script>
+
 </head>
 <body>
     <form>
@@ -76,7 +101,7 @@
                 </td>
             </tr>
         </table>
-        <div style="align : left; margin-left: 10px;">
+        <div style="border: solid black;">
             <h3><b>Riepilogo dati</b></h3>
             <b>Nome:</b><span id="rNome"></span><br>
             <b>Email:</b><span id="rEmail"></span><br>
@@ -84,6 +109,7 @@
             <b>Genere:</b><span id="rGenere"></span><br>
             <b>Interessi:</b><span id="rInteressi"></span><br>
             <b>Soddisfazione:</b><span id="rSoddisfazione"></span><br>
+
         </div>
     </form>
 </body>
