@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2><b>Modulo di registrazione</b></h2>
+        <table border="1" cellpadding="5" cellspacing="0" align = left>
+            <tr>
+                <td>
+                    Nome: 
+                </td>
+                <td>
+                    <input type="text" name="nome" id="nome">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" name="password" id="password">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="email" name="email" id="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    età:
+                </td>
+                <td>
+                    <input type="number" name="eta" id="eta">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Genere:
+                </td>
+                <td>
+                    <input type="radio" name="genere" id="maschio" value="maschio">Maschio
+                    <input type="radio" name="genere" id="femmina" value="femmina">Femmina
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Interessi:
+                </td>
+                <td>
+                    <input type="checkbox" name="interessi" id="sport" value="sport">Sport
+                    <input type="checkbox" name="interessi" id="musica" value="musica">Musica
+                    <input type="checkbox" name="interessi" id="viaggi" value="viaggi">Viaggi
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Soddisfazione(1-10):
+                </td>
+                <td>
+                    <input type="range" name="soddisfazione" id="soddisfazione" min="1" max="10">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="Invia">
+                    <input type="button" value="Stampa riepilogo" onclick="stampa();">
+                    <input type="reset" value="Reset">"
+                </td>
+            </tr>
+        </table>
+        <div style="align : left; margin-left: 10px;">
+            <h3><b>Riepilogo dati</b></h3>
+            <b>Nome:</b><span id="rNome"></span><br>
+            <b>Email:</b><span id="rEmail"></span><br>
+            <b>Età:</b><span id="rEta"></span><br>
+            <b>Genere:</b><span id="rGenere"></span><br>
+            <b>Interessi:</b><span id="rInteressi"></span><br>
+            <b>Soddisfazione:</b><span id="rSoddisfazione"></span><br>
+        </div>
+    </form>
+</body>
+</html>
